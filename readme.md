@@ -13,8 +13,7 @@ A project for a local construction business to add to my portfolio. I got inspir
 - JS
 - GULP
 
-## FEATURES
+## Features
 
 - Tab Component
-- Nav Component
 - Modal Component
