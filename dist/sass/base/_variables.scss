@@ -1,0 +1,55 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+// max-width
+$max-width: 75em; //1200px
+
+// colors
+$color-accent: #ffe900;
+$color-white: #fcfff7;
+$color-black: #011627;
+$color-grey: #817f82;
+$color-bg: #1658af;
+$color-bg-light: #20a4f3;
+
+// font fam
+$font-default: "Lato", sans-serif;
+$font-heading: "Merriweather", serif;
+
+// font sizes for paragraphs
+$base-font-size: 1rem;
+$smallest-font-size: 0.75rem;
+$small-font-size: 0.875rem;
+$medium-font-size: 1.125rem;
+$large-font-size: 1.25rem;
+
+// padding
+$padding-sm: 0.5em 1em;
+$padding-med: 0.75em 1.5em;
+$padding-big: 1em 2em;
+$padding-sm: 0.5em;
+
+$padding-top-sm: 1em;
+$padding-bottom-sm: 1em;
+$padding-top-med: 2em;
+$padding-bottom-med: 2em;
+$padding-top-big: 3em;
+$padding-bottom-big: 3em;
+
+// margin
+$margin-sm: 0.5em 1em;
+$margin-med: 0.75em 1.5em;
+$margin-big: 1em 2em;
+$margin-top-sm: 1em;
+$margin-bottom-sm: 1em;
+$margin-top-med: 2em;
+$margin-bottom-med: 2em;
+$margin-top-big: 3em;
+$margin-bottom-big: 3em;
+
+$box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);

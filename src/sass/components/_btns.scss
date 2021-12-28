@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  font-size: $small-font-size;
+  text-transform: capitalize;
+  padding: $padding-sm;
+  font-weight: 700;
+  font-family: $font-default;
+  border-radius: 3px;
+  transition: all 250ms ease;
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.8;
+  }
+  &--cta {
+    @extend .btn;
+    color: $color-black;
+    background-color: $color-accent;
+  }
+
+  &--default {
+    @extend .btn;
+    background-color: $color-white;
+    color: $color-bg;
+
+    // background-color: ;
+  }
+}

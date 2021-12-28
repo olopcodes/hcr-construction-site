@@ -1,0 +1,52 @@
+.header {
+  //   background-color: skyblue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: $box-shadow;
+  background-color: transparent;
+  z-index: 1000;
+  //   background-color: darkkhaki;
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .logo {
+    text-transform: uppercase;
+    font-size: $medium-font-size;
+    font-family: $font-heading;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo__name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    color: $color-white;
+  }
+
+  .logo__name-top {
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+  }
+
+  .logo__name-bottom {
+    font-size: $small-font-size;
+  }
+
+  .logo-icon {
+    display: inline-block;
+    padding: 0.2em;
+    background-color: $color-accent;
+    color: $color-bg;
+    font-size: 1.8rem;
+    margin-right: 0.1em;
+    // height: 2.5rem;
+    // width: 2.5rem;
+  }
+}

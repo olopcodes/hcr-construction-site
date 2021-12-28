@@ -1,0 +1,18 @@
+.main-nav {
+  align-self: center;
+
+  &__link {
+    text-transform: lowercase;
+    background-color: rgba($color-white, 0.15);
+    padding: 0.3em 0.6em;
+    color: $color-white;
+    border-radius: 3px;
+  }
+
+  &__contact-links {
+    display: none;
+    .main-nav__links {
+      text-transform: lowercase;
+    }
+  }
+}

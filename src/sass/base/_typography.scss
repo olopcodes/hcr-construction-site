@@ -1,0 +1,23 @@
+.heading {
+  &-main {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: $color-accent;
+  }
+
+  &-section {
+  }
+
+  &-tertiary {
+  }
+
+  &-fourth {
+  }
+
+  &-form {
+    font-size: 1.3rem;
+    color: $color-bg;
+    text-align: center;
+  }
+}
