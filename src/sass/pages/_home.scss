@@ -10,9 +10,60 @@
   background-size: cover;
   height: 90vh;
 
+  @include mq($media-tab) {
+    background-image: linear-gradient(
+        180deg,
+        rgba($color-black, 0.5) 15%,
+        rgba($color-black, 0.7) 100%
+      ),
+      url("../../images/hero-bg-1-big.jpeg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+
+  @include mq($media-desktop) {
+    height: 95vh;
+  }
+
+  @include mq($media-xl) {
+    background-image: linear-gradient(
+        180deg,
+        rgba($color-black, 0.5) 15%,
+        rgba($color-black, 0.7) 100%
+      ),
+      url("../../images/bg-hero-xl.jpeg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    @include mq($media-tab-land) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
   &__text {
     padding-top: 6em;
     color: $color-white;
+    @include mq($media-min) {
+      width: 75%;
+    }
+
+    @include mq($media-tab) {
+      width: 25rem;
+      padding-top: 8rem;
+    }
+
+    @include mq($media-tab-land) {
+      padding: 0;
+    }
   }
 
   &__btns {

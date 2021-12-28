@@ -9,6 +9,14 @@ FONT SIZE SYSTEM (px)
 // max-width
 $max-width: 75em; //1200px
 
+// media queries
+$media-min: 31.25em;
+$media-tab: 48em;
+$media-tab-land: 60em;
+$media-desktop: 75em;
+$media-xl: 112.5em;
+$media-xxl: 131em;
+
 // colors
 $color-accent: #ffe900;
 $color-white: #fefffb;
@@ -29,10 +37,9 @@ $medium-font-size: 1.125rem;
 $large-font-size: 1.25rem;
 
 // padding
-$padding-sm: 0.5em 1em;
-$padding-med: 0.75em 1.5em;
-$padding-big: 1em 2em;
 $padding-sm: 0.5em;
+$padding-med: 1.5em;
+$padding-big: 2.5em;
 
 $padding-top-sm: 1em;
 $padding-bottom-sm: 1em;

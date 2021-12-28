@@ -3,11 +3,32 @@
   background-color: $color-white;
   border-radius: 3px;
   box-shadow: $box-shadow;
-  padding: $padding-big $padding-med;
+  padding: 3em 1.5em;
   transform: translateY(20%);
+
+  @include mq($media-min) {
+    width: 25rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  @include mq($media-tab) {
+    margin: 0;
+    transform: translateY(5%);
+    align-self: end;
+  }
+
+  @include mq($media-tab-land) {
+    transform: translateY(0);
+    align-self: center;
+    width: 22rem;
+  }
 
   &__box {
     margin: 2em 0;
+    @include mq($media-tab-land) {
+      margin: 1em 0;
+    }
   }
 
   label {
@@ -20,16 +41,21 @@
     color: $color-bg;
     background-color: $color-white;
     transform: translate(5%, 50%);
+    @include mq($media-tab) {
+      font-size: $base-font-size;
+    }
   }
 
   input,
   textarea {
     outline: 0;
     width: 100%;
+    border: 1px solid $color-grey;
     padding: 0.7em;
-  }
-
-  .btn {
-    padding: $padding-med;
+    border-radius: 3px;
+    font-size: $small-font-size;
+    font-weight: 700;
+    font-family: $font-default;
+    color: $color-grey;
   }
 }

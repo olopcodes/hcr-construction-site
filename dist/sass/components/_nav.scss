@@ -1,18 +1,45 @@
 .main-nav {
   align-self: center;
+  @include mq($media-tab) {
+    flex: 1;
+    margin-left: 2em;
+  }
 
   &__link {
     text-transform: lowercase;
-    background-color: rgba($color-white, 0.2);
+    background-color: rgba($color-white, 0.15);
     padding: 0.3em 0.6em;
     color: $color-white;
     border-radius: 3px;
+
+    @include mq($media-tab) {
+      font-size: 1.1rem;
+    }
+  }
+
+  @include mq($media-tab) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__contact-links {
     display: none;
+
     .main-nav__links {
-      text-transform: lowercase;
+      background-color: transparent;
     }
+
+    @include mq($media-tab) {
+      // margin-left: auto;
+      display: flex;
+      gap: 1em;
+    }
+  }
+
+  .contact__link {
+    display: flex;
+    align-items: center;
+    color: $color-white;
   }
 }

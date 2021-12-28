@@ -1,12 +1,9 @@
 .heading {
   &-main {
-    line-height: 1.1;
     text-transform: uppercase;
     font-size: 2rem;
     margin-bottom: 0.5em;
-    // color: ;$color-accent
     color: $color-accent;
-    font-weight: 700;
   }
 
   &-section {
@@ -16,5 +13,11 @@
   }
 
   &-fourth {
+  }
+
+  &-form {
+    font-size: 1.3rem;
+    color: $color-bg;
+    text-align: center;
   }
 }
