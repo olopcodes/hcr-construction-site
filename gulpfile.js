@@ -41,7 +41,7 @@ function css(cb) {
 }
 
 function js(cb) {
-  src(`${source}/js/**/*.js`)
+  src([`${source}/js/main.js`, `${source}/js/app.js`])
     .pipe(
       babel({
         presets: ["@babel/env"],
