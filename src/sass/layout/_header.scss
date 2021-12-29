@@ -7,6 +7,11 @@
   //   box-shadow: $box-shadow;
   background-color: transparent;
   z-index: 1000;
+
+  &.scroll {
+    background-color: $color-bg-light;
+  }
+
   //   background-color: darkkhaki;
   .container {
     display: flex;
@@ -52,7 +57,5 @@
     @include mq($media-tab) {
       font-size: 2.2rem;
     }
-    // height: 2.5rem;
-    // width: 2.5rem;
   }
 }
