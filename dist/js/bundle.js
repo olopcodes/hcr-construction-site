@@ -7,7 +7,6 @@ getQuoteBtn.addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("hero-name-input").focus();
 });
-
 var regularForm = document.querySelector(".form-regular");
 regularForm.addEventListener("focusin", function (e) {
   e.target.previousElementSibling.classList.add("focus");
@@ -16,9 +15,7 @@ regularForm.addEventListener("focusout", function (e) {
   if (e.target.value === "") {
     e.target.previousElementSibling.classList.remove("focus");
   }
-});
-
-// animate header on scroll
-("use strict");
+}); // animate header on scroll
+"use strict";
 
 console.log("app");
