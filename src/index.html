@@ -51,7 +51,7 @@
               apartments in the tri-state area
             </p>
             <div class="home-hero__btns">
-              <a href="#get-qoute" class="btn btn--cta">get a quote</a>
+              <a id="get-quote" href="#" class="btn btn--cta">get a quote</a>
               <a href="projects.html" class="btn btn--default"
                 >our advantage<i class="ri-arrow-down-line"></i>
               </a>
@@ -64,11 +64,11 @@
             </h3>
             <div class="form-regular__box">
               <label for="hero-name">name</label>
-              <input type="text" />
+              <input id="hero-name-input" type="text" required />
             </div>
             <div class="form-regular__box">
               <label for="hero-email">email</label>
-              <input type="email" />
+              <input type="email" required />
             </div>
             <div class="form-regular__box">
               <label for="hero-message">Your inquiry</label>
@@ -77,6 +77,7 @@
                 id="hero-message"
                 cols="30"
                 rows="3"
+                required
               ></textarea>
             </div>
             <button id="hero-submit" class="btn btn--cta">get quote</button>
@@ -85,6 +86,6 @@
       </div>
     </main>
     <footer></footer>
-    <script src="bundle.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

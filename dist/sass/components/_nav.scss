@@ -15,6 +15,12 @@
     @include mq($media-tab) {
       font-size: 1.1rem;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-bg;
+    }
   }
 
   @include mq($media-tab) {
@@ -25,10 +31,6 @@
 
   &__contact-links {
     display: none;
-
-    .main-nav__links {
-      background-color: transparent;
-    }
 
     @include mq($media-tab) {
       // margin-left: auto;
@@ -41,5 +43,14 @@
     display: flex;
     align-items: center;
     color: $color-white;
+    padding: 0.3em;
+    border-radius: 3px;
+    // font-weight: 700;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-bg;
+      background-color: $color-white;
+    }
   }
 }

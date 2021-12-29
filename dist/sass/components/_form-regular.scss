@@ -18,8 +18,17 @@
     align-self: end;
   }
 
+  @include mq($media-tab-land) {
+    // transform: translateY(0);
+    align-self: center;
+    width: 22rem;
+  }
+
   &__box {
     margin: 2em 0;
+    @include mq($media-tab-land) {
+      margin: 1em 0;
+    }
   }
 
   label {
@@ -32,9 +41,14 @@
     color: $color-bg;
     background-color: $color-white;
     transform: translate(5%, 50%);
+    transition: transform ease 300ms;
     @include mq($media-tab) {
       font-size: $base-font-size;
     }
+  }
+
+  label.focus {
+    transform: translate(5%, 0);
   }
 
   input,
