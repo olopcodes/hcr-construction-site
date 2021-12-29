@@ -36,6 +36,11 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
+    height: 75vh;
+  }
+
+  @include mq($media-xxl) {
+    height: 60vh;
   }
 
   .container {

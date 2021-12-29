@@ -19,7 +19,7 @@
   }
 
   @include mq($media-tab-land) {
-    transform: translateY(0);
+    // transform: translateY(0);
     align-self: center;
     width: 22rem;
   }
