@@ -21,24 +21,5 @@ regularForm.addEventListener("focusout", function (e) {
 }); // animate header on scroll
 "use strict";
 
-// new from observer js
-var changeBackgroundOnScroll = function changeBackgroundOnScroll(entries, obs) {
-  entries.forEach(function (entry) {
-    // if entry not in the viewport
-    if (!entry.isIntersecting) return; // stop observing
-
-    obs.unobserve(entry.target); // log when intersecting
-
-    console.log("intersecting the viewport according to options"); // this is what i want to happen
-
-    document.querySelector(".header").classList.add("scroll");
-  });
-};
-
-var options = {
-  rootMargin: "150px"
-};
-var observer = new IntersectionObserver(changeBackgroundOnScroll, options); // Element to observer
-
-var header = document.querySelector(".header");
-observer.observe(header);
+// from observer
+console.log("hello again observer");
