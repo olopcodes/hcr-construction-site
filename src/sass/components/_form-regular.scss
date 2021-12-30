@@ -4,7 +4,7 @@
   border-radius: 3px;
   box-shadow: $box-shadow;
   padding: 3em 1.5em;
-  transform: translateY(20%);
+  transform: translateY(10%);
 
   @include mq($media-min) {
     width: 25rem;
