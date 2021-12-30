@@ -22,28 +22,23 @@ regularForm.addEventListener("focusout", function (e) {
 "use strict";
 
 // from observer
-console.log("hello again observer branch");
 var header = document.querySelector(".header"); //  this will be the content after the hero section
 
-var targetToObserve = document.querySelector(".home-hero");
-
-var changeBgOnScroll = function changeBgOnScroll(entries, obs) {
-  entries.forEach(function (entry) {
-    // if entry is not in the viewport
-    if (!entry.isIntersecting) return; // stop observing
-    // obs.unobserve(entry.target);
-    // let me know when target intersects
-
-    console.log("target is in the viewport");
-    console.log(entry.intersectionRatio); // do this to the element
-
-    header.classList.add("scroll");
-  });
-};
-
+var targetToObserve = document.querySelector(".home-best");
 var options = {
-  rootMargin: "70px",
-  threshold: 0.4
+  threshold: 0,
+  // moves the target 80px away, so have to scroll down
+  rootMargin: "-80px"
 };
-var observer = new IntersectionObserver(changeBgOnScroll, options);
+var observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+
+    if (entry.isIntersecting) {
+      header.classList.add("scroll");
+    } else {
+      header.classList.remove("scroll");
+    }
+  });
+}, options);
 observer.observe(targetToObserve);
