@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  height: 90vh;
+  height: 95vh;
 
   @include mq($media-tab) {
     background-image: linear-gradient(
@@ -55,7 +55,7 @@
   }
 
   &__text {
-    padding-top: 6em;
+    padding-top: 8em;
     color: $color-white;
     @include mq($media-min) {
       width: 75%;
