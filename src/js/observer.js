@@ -12,7 +12,7 @@ const options = {
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
+    // if (!entry.isIntersecting) return;
 
     if (entry.isIntersecting) {
       header.classList.add("scroll");

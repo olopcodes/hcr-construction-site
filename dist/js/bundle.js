@@ -32,8 +32,7 @@ var options = {
 };
 var observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
-    if (!entry.isIntersecting) return;
-
+    // if (!entry.isIntersecting) return;
     if (entry.isIntersecting) {
       header.classList.add("scroll");
     } else {
