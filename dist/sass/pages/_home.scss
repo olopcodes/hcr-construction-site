@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  height: 90vh;
+  height: 95vh;
 
   @include mq($media-tab) {
     background-image: linear-gradient(
@@ -55,7 +55,7 @@
   }
 
   &__text {
-    padding-top: 6em;
+    padding-top: 8em;
     color: $color-white;
     @include mq($media-min) {
       width: 75%;
@@ -85,5 +85,119 @@
         transform: translateY(1px);
       }
     }
+  }
+}
+
+.home-best {
+  padding: 33rem 0 6rem;
+  width: 100%;
+  @include mq($media-min) {
+    padding: 31rem 0 6rem;
+  }
+
+  @include mq($media-tab-land) {
+    padding: 6rem 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-auto-rows: 2rem;
+    gap: 1em 0.5em;
+    // grid-column-gap: 0.3em;
+    width: 100%;
+    @include mq($media-tab-land) {
+      grid-template-columns: repeat(8, 11%);
+      gap: 1.5em 1em;
+    }
+  }
+
+  &__img-box {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__img-box-1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 3;
+    @include mq($media-min) {
+      grid-row: 1 / span 4;
+    }
+
+    @include mq($media-tab-land) {
+    }
+  }
+
+  &__img-box-2 {
+    grid-row: 9 / span 6;
+    grid-column: 1 / span 2;
+  }
+
+  &__img-box-3 {
+    grid-column: 3 / span 2;
+    grid-row: 17 / span 6;
+    @include mq($media-min) {
+      grid-row: 15 / span 6;
+    }
+  }
+
+  &__img-box-4 {
+    grid-column: 1 / -1;
+    grid-row: 23 / span 4;
+    @include mq($media-min) {
+      grid-row: 21 / span 6;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    background-color: $color-white;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    @include mq($media-tab-land) {
+      padding: 3em 2em;
+    }
+  }
+
+  &__description-1 {
+    grid-column: 1 / -1;
+    grid-row: 4 / span 5;
+    @include mq($media-min) {
+      grid-row: 5 / span 4;
+    }
+  }
+
+  &__description-2 {
+    grid-row: 9 / span 8;
+    grid-column: 3 / span 2;
+    @include mq($media-min) {
+      grid-row: 9 / span 6;
+    }
+  }
+
+  &__description-3 {
+    grid-row: 15 / span 8;
+    grid-column: 1 / span 2;
+    @include mq($media-min) {
+      grid-row: 15 / span 6;
+    }
+  }
+
+  &__icon {
+    color: $color-bg;
+    font-size: 1.3rem;
+    display: inline;
+    border-bottom: 3px solid $color-accent;
+  }
+
+  &__text {
+    color: $color-grey;
+    font-size: 0.9rem;
   }
 }
