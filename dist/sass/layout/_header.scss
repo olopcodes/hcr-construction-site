@@ -1,18 +1,15 @@
 .header {
-  //   background-color: skyblue;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  //   box-shadow: $box-shadow;
   background-color: transparent;
   z-index: 1000;
 
   &.scroll {
-    background-color: $color-bg-light;
+    background-color: $color-black;
   }
 
-  //   background-color: darkkhaki;
   .container {
     display: flex;
     align-items: flex-start;

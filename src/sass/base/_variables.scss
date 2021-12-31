@@ -10,12 +10,12 @@ FONT SIZE SYSTEM (px)
 $max-width: 75em; //1200px
 
 // media queries
-$media-min: 31.25em;
-$media-tab: 48em;
-$media-tab-land: 60em;
-$media-desktop: 75em;
-$media-xl: 112.5em;
-$media-xxl: 131em;
+$media-min: 31.25em; // 500px
+$media-tab: 48em; // 768px
+$media-tab-land: 60em; // 960px
+$media-desktop: 75em; // 1200px
+$media-xl: 112.5em; // 1800px
+$media-xxl: 131em; // +2000px
 
 // colors
 $color-accent: #ffe900;

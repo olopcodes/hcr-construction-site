@@ -43,14 +43,14 @@
     display: flex;
     align-items: center;
     color: $color-white;
-    padding: 0.3em;
+    padding: 0.3em 0.6em;
     border-radius: 3px;
     // font-weight: 700;
     &:focus,
     &:hover,
     &:active {
-      color: $color-bg;
-      background-color: $color-white;
+      // color: $color-bg;
+      background-color: $color-bg;
     }
   }
 }
