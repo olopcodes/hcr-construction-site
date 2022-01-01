@@ -92,11 +92,29 @@
   padding: 33rem 0 6rem;
   width: 100%;
   @include mq($media-min) {
-    padding: 31rem 0 6rem;
+    padding: 31em 0 6em;
+  }
+
+  @include mq($media-tab) {
+    padding: 19em 0 6em;
   }
 
   @include mq($media-tab-land) {
     padding: 6rem 0;
+  }
+
+  .heading-section {
+    @include mq($media-tab) {
+      width: 22rem;
+    }
+
+    @include mq($media-tab-land) {
+      width: 25rem;
+    }
+
+    @include mq($media-desktop) {
+      width: auto;
+    }
   }
 
   &__grid {

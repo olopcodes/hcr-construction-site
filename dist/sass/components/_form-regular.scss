@@ -9,13 +9,17 @@
   @include mq($media-min) {
     width: 25rem;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4em 2em;
   }
 
   @include mq($media-tab) {
     margin: 0;
     transform: translateY(5%);
     align-self: end;
+    height: 30rem;
+    padding: 3em 2em;
+
+    // padding: 3re;
   }
 
   @include mq($media-tab-land) {
@@ -26,7 +30,7 @@
 
   &__box {
     margin: 2em 0;
-    @include mq($media-tab-land) {
+    @include mq($media-tab) {
       margin: 1em 0;
     }
   }

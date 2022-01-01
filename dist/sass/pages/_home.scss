@@ -95,6 +95,9 @@
     padding: 31rem 0 6rem;
   }
 
+  @include mq($media-tab) {
+  }
+
   @include mq($media-tab-land) {
     padding: 6rem 0;
   }
@@ -107,14 +110,18 @@
     // grid-column-gap: 0.3em;
     width: 100%;
     @include mq($media-tab-land) {
-      grid-template-columns: repeat(8, 11%);
-      gap: 1.5em 1em;
+      grid-template-columns: repeat(8, 10%);
+      gap: 2em 1.5em;
     }
   }
 
   &__img-box {
     border-radius: 4px;
     overflow: hidden;
+    transition: box-shadow 250ms ease;
+    &:hover {
+      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__img-box-1 {
@@ -125,12 +132,17 @@
     }
 
     @include mq($media-tab-land) {
+      grid-column: 1 / span 5;
     }
   }
 
   &__img-box-2 {
     grid-row: 9 / span 6;
     grid-column: 1 / span 2;
+    @include mq($media-tab-land) {
+      grid-row: 5 / span 7;
+      grid-column: 1 / span 3;
+    }
   }
 
   &__img-box-3 {
@@ -139,6 +151,10 @@
     @include mq($media-min) {
       grid-row: 15 / span 6;
     }
+    @include mq($media-tab-land) {
+      grid-column: 6 / -1;
+      grid-row: 7 / span 5;
+    }
   }
 
   &__img-box-4 {
@@ -146,6 +162,11 @@
     grid-row: 23 / span 4;
     @include mq($media-min) {
       grid-row: 21 / span 6;
+    }
+
+    @include mq($media-tab-land) {
+      grid-row: 12 / span 7;
+      grid-column: 3 / -1;
     }
   }
 
@@ -160,8 +181,17 @@
     padding: 1em;
     border-radius: 3px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background 350ms ease;
     @include mq($media-tab-land) {
       padding: 3em 2em;
+    }
+
+    &:hover {
+      background-color: $color-bg-light;
+    }
+
+    &:hover .home-best__text {
+      color: $color-white;
     }
   }
 
@@ -171,6 +201,11 @@
     @include mq($media-min) {
       grid-row: 5 / span 4;
     }
+
+    @include mq($media-tab-land) {
+      grid-row: 1 / span 6;
+      grid-column: 6 / -1;
+    }
   }
 
   &__description-2 {
@@ -178,6 +213,11 @@
     grid-column: 3 / span 2;
     @include mq($media-min) {
       grid-row: 9 / span 6;
+    }
+
+    @include mq($media-tab-land) {
+      grid-row: 5 / span 7;
+      grid-column: 4 / span 2;
     }
   }
 
@@ -187,6 +227,10 @@
     @include mq($media-min) {
       grid-row: 15 / span 6;
     }
+
+    @include mq($media-tab-land) {
+      grid-row: 12 / span 7;
+    }
   }
 
   &__icon {
@@ -194,10 +238,17 @@
     font-size: 1.3rem;
     display: inline;
     border-bottom: 3px solid $color-accent;
+    @include mq($media-desktop) {
+      font-size: 1.6rem;
+    }
   }
 
   &__text {
     color: $color-grey;
     font-size: 0.9rem;
+    transition: color 250ms ease;
+    @include mq($media-desktop) {
+      font-size: 1.05rem;
+    }
   }
 }

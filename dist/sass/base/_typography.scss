@@ -19,6 +19,9 @@
     margin-top: 0.3em;
 
     margin-bottom: 0.5em;
+    @include mq($media-desktop) {
+      font-size: 1.35rem;
+    }
   }
 
   &-tertiary {
