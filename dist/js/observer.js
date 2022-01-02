@@ -4,6 +4,9 @@ const header = document.querySelector(".header");
 //  this will be the content after the hero section
 const targetToObserve = document.querySelector(".home-best");
 
+// lazy loaded images
+const homeBestOnly = targetToObserve.querySelectorAll("img");
+
 const options = {
   // when the target is 25% in the viewport
   threshold: 0,
@@ -17,6 +20,11 @@ const observer = new IntersectionObserver((entries, observer) => {
 
     if (entry.isIntersecting) {
       header.classList.add("scroll");
+      // console.log(homeBestOnly);
+      homeBestOnly.forEach((el) => {
+        el.classList.remove("lazy-img");
+        el.src = el.dataset.src;
+      });
     } else {
       header.classList.remove("scroll");
     }

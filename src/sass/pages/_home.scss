@@ -1,3 +1,4 @@
+// hero section =============================================================================
 .home-hero {
   background-image: linear-gradient(
       180deg,
@@ -88,6 +89,7 @@
   }
 }
 
+// home best section =============================================================
 .home-best {
   padding: 33rem 0 6rem;
   width: 100%;
@@ -266,5 +268,51 @@
     @include mq($media-desktop) {
       font-size: 1.05rem;
     }
+  }
+}
+
+// home works section ===============================================
+.home-works {
+  &__content {
+    margin-top: 3em;
+  }
+
+  &__showcase {
+  }
+
+  &__tabs {
+  }
+
+  &__work {
+  }
+
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1em;
+  }
+
+  &__icon {
+    color: $color-bg;
+    font-size: 1.5rem;
+    display: grid;
+    margin-right: 0.5em;
+    place-items: center;
+    // display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    // border-radius: 50%;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    // border-bottom: 3px solid $color-accent;
+  }
+
+  &__description {
+  }
+
+  &__facts {
+  }
+
+  .btn {
   }
 }

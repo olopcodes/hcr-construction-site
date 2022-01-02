@@ -25,32 +25,40 @@ regularForm.addEventListener("focusout", function (e) {
 // for the header bg change
 var header = document.querySelector(".header"); //  this will be the content after the hero section
 
-var targetToObserve = document.querySelector(".home-best"); // lazy loaded images
+var homeHeroSection = document.querySelector(".home-hero");
+var homeBestSection = document.querySelector(".home-best");
+var homeWorksSection = document.querySelector(".home-works");
+var targets = [homeBestSection, homeWorksSection]; // lazy loaded images
 
-var homeBestOnly = targetToObserve.querySelectorAll("img");
-var options = {
-  // when the target is 25% in the viewport
-  threshold: 0,
-  // moves the target 80px away, so have to scroll down
-  rootMargin: "-85px"
+var homeBestOnly = homeBestSection.querySelectorAll("img");
+var heroOptions = {
+  // when the target is 90% in the viewport
+  threshold: 0.9
 };
-var observer = new IntersectionObserver(function (entries, observer) {
+var heroObserver = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
     // if (!entry.isIntersecting) return;
-    if (entry.isIntersecting) {
-      header.classList.add("scroll"); // console.log(homeBestOnly);
-
+    if (entry.intersectionRatio < 0.9) {
+      header.classList.add("scroll");
+    } else if (entry.intersectionRatio > 0.9) {
+      header.classList.remove("scroll");
+    }
+  });
+}, heroOptions);
+heroObserver.observe(homeHeroSection);
+var bestOptions = {
+  // when the section is 12% or more in the viewport
+  threshold: 0.15
+};
+var bestObserver = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > 0.15) {
       homeBestOnly.forEach(function (el) {
         el.classList.remove("lazy-img");
         el.src = el.dataset.src;
+        observer.unobserve(entry.target);
       });
-    } else {
-      header.classList.remove("scroll");
-    } // observer.unobserve(entry.target);
-
+    }
   });
-}, options);
-observer.observe(targetToObserve); // lazy loading images on the best section and works/projects section
-// we will target two sections
-// lets do one first
-// const bestTarget =
+}, bestOptions);
+bestObserver.observe(homeBestSection);

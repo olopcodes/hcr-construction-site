@@ -192,11 +192,6 @@
     object-fit: cover;
   }
 
-  .lazy-img {
-    opacity: 0.3;
-    filter: blur(3px);
-  }
-
   &__description {
     background-color: $color-white;
     padding: 1em;

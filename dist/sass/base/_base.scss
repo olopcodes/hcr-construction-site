@@ -58,10 +58,16 @@ a {
 img {
   display: block;
   max-width: 100%;
+  transition: all 1s;
 }
 
 .container {
   max-width: $max-width;
   padding: 0 1em;
   margin: 0 auto;
+}
+
+.lazy-img {
+  opacity: 0.3;
+  filter: blur(3px);
 }
