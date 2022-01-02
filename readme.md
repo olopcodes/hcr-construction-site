@@ -15,5 +15,6 @@ A project for a local construction business to add to my portfolio. I got inspir
 
 ## Features
 
+- Lazy load images
 - Tab Component
 - Modal Component

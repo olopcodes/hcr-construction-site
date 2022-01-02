@@ -133,8 +133,9 @@
   &__img-box {
     border-radius: 4px;
     overflow: hidden;
-    transition: box-shadow 250ms ease;
+    transition: all 250ms ease;
     &:hover {
+      transform: translateY(-2px);
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
     }
   }
