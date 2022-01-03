@@ -273,23 +273,130 @@
 
 // home works section ===============================================
 .home-works {
+  padding: 6em 0;
+  background-image: linear-gradient(
+      180deg,
+      rgba($color-bg-light, 0.4) 15%,
+      rgba($color-bg-light, 0.5) 100%
+    ),
+    url("../../images/home-works-med.jpeg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  // height: 80vh;
+  h2 {
+    color: $color-white;
+  }
   &__content {
     margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+
+    @include mq($media-tab) {
+      flex-direction: row;
+      align-items: center;
+      gap: 2em;
+    }
+
+    @include mq($media-tab-land) {
+      gap: 4em;
+    }
   }
 
   &__showcase {
+    order: 2;
+    @include mq($media-tab) {
+      order: 1;
+      flex: 1;
+    }
   }
 
   &__tabs {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-bottom: 2em;
+    @include mq($media-tab) {
+      transform: translateY(-4rem);
+      gap: 2em;
+    }
+
+    @include mq($media-tab-land) {
+      flex: 1;
+      align-items: flex-start;
+    }
+
+    @include mq($media-desktop) {
+      align-items: center;
+    }
+    button {
+      font-weight: 700;
+      display: flex;
+      height: 3rem;
+      gap: 0.5em;
+      align-items: center;
+      padding: 0.5em;
+      border-radius: 3px;
+      border: 0;
+      background-color: $color-bg-light;
+      color: $color-white;
+      background-color: $color-bg;
+      cursor: pointer;
+      transition: all 250ms;
+
+      @include mq($media-tab-land) {
+        padding: 2em 4em;
+
+        &:nth-of-type(even) {
+          // transform: translateX(1rem);
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  button.active-tab,
+  &__tabs button:hover {
+    background-color: $color-accent;
+    color: $color-bg;
+  }
+
+  // &__tabs button:hover
+
+  &__tab-icon {
+    font-size: 1.3rem;
+    transition: all 250ms;
+  }
+
+  &__tab-text {
+    text-transform: uppercase;
+    font-size: $small-font-size;
   }
 
   &__work {
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 2em 1em;
+    height: 48rem;
+
+    @include mq($media-tab) {
+      height: 44rem;
+    }
+
+    @include mq($media-desktop) {
+      padding: 3em;
+      height: 52rem;
+    }
   }
 
   &__heading {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: $color-accent;
+    border-radius: 3px;
   }
 
   &__icon {
@@ -298,21 +405,47 @@
     display: grid;
     margin-right: 0.5em;
     place-items: center;
-    // display: inline-block;
     height: 3rem;
     width: 3rem;
-    // border-radius: 50%;
     background-color: $color-white;
     box-shadow: $box-shadow;
-    // border-bottom: 3px solid $color-accent;
+  }
+
+  &__img {
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+    height: 18rem;
+    width: 100%;
+
+    @include mq($media-desktop) {
+      height: 25rem;
+    }
   }
 
   &__description {
+    color: $color-grey;
+    margin-bottom: 1em;
   }
 
   &__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  &__facts span {
+    display: inline-block;
+    background-color: $color-accent;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    border-radius: 20rem;
+    font-size: $smallest-font-size;
   }
 
   .btn {
+    background-color: $color-bg;
+    color: $color-white;
+    letter-spacing: 0.5px;
   }
 }

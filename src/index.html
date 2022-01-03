@@ -175,7 +175,10 @@
           </h2>
           <div class="home-works__content">
             <div class="home-works__showcase">
-              <div id="work-community" class="home-works__work">
+              <div
+                id="work-community"
+                class="home-works__work home-works__work-1"
+              >
                 <div class="home-works__heading">
                   <span class="home-works__icon"
                     ><i class="ri-community-fill"></i
@@ -183,6 +186,7 @@
                   <h3 class="heading-work">The community recreation center</h3>
                 </div>
                 <img
+                  class="home-works__img"
                   src="./images/reno-4-med.jpeg"
                   alt="a renovated recreation center"
                 />
@@ -200,22 +204,41 @@
                 </div>
                 <!-- for linking to another point in a page -->
                 <!-- <a href="directry/filename.html#section5" >click me</a> -->
-                <a href="#" class="btn">read more</a>
+                <a href="#" class="btn">see more</a>
               </div>
             </div>
 
             <div class="home-works__tabs">
+              <button class="active-tab" data-id="">
+                <span class="home-works__tab-icon"
+                  ><i class="ri-community-fill"></i
+                ></span>
+                <span class="home-works__tab-text"
+                  >the community rec center</span
+                >
+              </button>
+
               <button data-id="">
-                <span><i class="ri-community-fill"></i></span>
+                <span class="home-works__tab-icon"
+                  ><i class="ri-home-7-line"></i
+                ></span>
+                <span class="home-works__tab-text"
+                  >all hands bath breakdown</span
+                >
               </button>
               <button data-id="">
-                <span><i class="ri-building-2-line"></i></span>
+                <span class="home-works__tab-icon"
+                  ><i class="ri-building-2-line"></i
+                ></span>
+                <span class="home-works__tab-text">the new city towers</span>
               </button>
               <button data-id="">
-                <span><i class="ri-home-7-line"></i></span>
-              </button>
-              <button data-id="">
-                <span><i class="ri-home-8-fill"></i></span>
+                <span class="home-works__tab-icon"
+                  ><i class="ri-home-8-fill"></i
+                ></span>
+                <span class="home-works__tab-text"
+                  >the reimagined kitchenette</span
+                >
               </button>
             </div>
           </div>

@@ -2,39 +2,47 @@
 // for the header bg change
 const header = document.querySelector(".header");
 //  this will be the content after the hero section
-const targetToObserve = document.querySelector(".home-best");
-
+const homeHeroSection = document.querySelector(".home-hero");
+const homeBestSection = document.querySelector(".home-best");
+const homeWorksSection = document.querySelector(".home-works");
+const targets = [homeBestSection, homeWorksSection];
 // lazy loaded images
-const homeBestOnly = targetToObserve.querySelectorAll("img");
+const homeBestOnly = homeBestSection.querySelectorAll("img");
 
-const options = {
-  // when the target is 25% in the viewport
-  threshold: 0,
-  // moves the target 80px away, so have to scroll down
-  rootMargin: "-85px",
+const heroOptions = {
+  // when the target is 90% in the viewport
+  threshold: 0.9,
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+const heroObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     // if (!entry.isIntersecting) return;
 
-    if (entry.isIntersecting) {
+    if (entry.intersectionRatio < 0.9) {
       header.classList.add("scroll");
-      // console.log(homeBestOnly);
+    } else if (entry.intersectionRatio > 0.9) {
+      header.classList.remove("scroll");
+    }
+  });
+}, heroOptions);
+
+heroObserver.observe(homeHeroSection);
+
+const bestOptions = {
+  // when the section is 12% or more in the viewport
+  threshold: 0.15,
+};
+
+const bestObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0.15) {
       homeBestOnly.forEach((el) => {
         el.classList.remove("lazy-img");
         el.src = el.dataset.src;
+        observer.unobserve(entry.target);
       });
-    } else {
-      header.classList.remove("scroll");
     }
-    // observer.unobserve(entry.target);
   });
-}, options);
+}, bestOptions);
 
-observer.observe(targetToObserve);
-
-// lazy loading images on the best section and works/projects section
-// we will target two sections
-// lets do one first
-// const bestTarget =
+bestObserver.observe(homeBestSection);
