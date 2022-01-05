@@ -276,13 +276,17 @@
   padding: 6em 0;
   background-image: linear-gradient(
       180deg,
-      rgba($color-bg-light, 0.5) 15%,
-      rgba($color-bg-light, 0.7) 100%
+      rgba($color-bg-light, 0.4) 15%,
+      rgba($color-bg-light, 0.5) 100%
     ),
     url("../../images/home-works-med.jpeg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  // height: 80vh;
+  h2 {
+    color: $color-white;
+  }
   &__content {
     margin-top: 3em;
     display: flex;
@@ -337,6 +341,7 @@
       border: 0;
       background-color: $color-bg-light;
       color: $color-white;
+      background-color: $color-bg;
       cursor: pointer;
       transition: all 250ms;
 
@@ -361,7 +366,6 @@
 
   &__tab-icon {
     font-size: 1.3rem;
-    color: $color-bg;
     transition: all 250ms;
   }
 
@@ -371,6 +375,19 @@
   }
 
   &__work {
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 2em 1em;
+    height: 48rem;
+
+    @include mq($media-tab) {
+      height: 44rem;
+    }
+
+    @include mq($media-desktop) {
+      padding: 3em;
+      height: 52rem;
+    }
   }
 
   &__heading {
@@ -397,6 +414,12 @@
   &__img {
     border-radius: 3px;
     margin-bottom: 1.5em;
+    height: 18rem;
+    width: 100%;
+
+    @include mq($media-desktop) {
+      height: 25rem;
+    }
   }
 
   &__description {
@@ -424,5 +447,64 @@
     background-color: $color-bg;
     color: $color-white;
     letter-spacing: 0.5px;
+  }
+}
+
+// home testimonials ==================================================================
+.home-testimonials {
+  padding: 6em 0;
+  background-color: $color-bg-light;
+  h2 {
+    color: $color-white;
+  }
+
+  &__wrapper {
+  }
+
+  &__box {
+    text-align: center;
+    border: 1px solid;
+    position: relative;
+    padding: 4em 0.5em 2em;
+  }
+
+  &__icon {
+    position: absolute;
+    color: $color-bg;
+    font-size: 4rem;
+    display: inline-block;
+    left: 40%;
+    top: 1rem;
+    z-index: 0;
+    opacity: 0.7;
+  }
+
+  &__text {
+    position: relative;
+    color: $color-white;
+    // font-weight: 700;
+  }
+
+  &__author {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: $font-heading;
+  }
+
+  &__job {
+    position: relative;
+    text-transform: capitalize;
+    font-size: $small-font-size;
+    font-weight: 700;
+    color: $color-black;
+    &::before {
+      content: "";
+      position: absolute;
+      @include centerAbsolutely;
+      height: 2px;
+      width: 30%;
+      background-color: $color-accent;
+    }
   }
 }
