@@ -459,13 +459,46 @@
   }
 
   &__wrapper {
+    position: relative;
+    height: 25rem;
+    @include mq($media-min) {
+      display: grid;
+      grid-template-columns: repeat(4, 21%);
+      gap: 1.5em;
+      border: 2px solid red;
+    }
   }
 
   &__box {
+    @include centerAbsolutely;
     text-align: center;
-    border: 1px solid;
-    position: relative;
-    padding: 4em 0.5em 2em;
+    border-radius: 3px;
+    padding: 4em 0.5em;
+    transition: 250ms ease;
+    // height: 23rem;
+    opacity: 0;
+    background-color: $color-bg-light;
+
+    @include mq($media-tab-land) {
+      opacity: 0.5;
+      z-index: 2;
+    }
+
+    &.active {
+      opacity: 1;
+      z-index: 2;
+      // background-color: $color-bg;
+      box-shadow: $box-shadow;
+
+      @include mq($media-min) {
+        width: 22rem;
+        padding: 4em 1.5em;
+      }
+
+      @include mq($media-tab-land) {
+        width: auto;
+      }
+    }
   }
 
   &__icon {
@@ -502,9 +535,42 @@
       content: "";
       position: absolute;
       @include centerAbsolutely;
-      height: 2px;
+      top: -0.3rem;
+      height: 0.2rem;
+      border-radius: 3px;
       width: 30%;
       background-color: $color-accent;
     }
+  }
+
+  &__btns {
+    position: absolute;
+    width: 6rem;
+    @include centerAbsolutely;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btns button {
+    border: 0;
+    color: $color-bg-light;
+    border-radius: 3px;
+    padding: 0.3em;
+    font-size: 1.5rem;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    background-color: $color-bg;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $box-shadow;
+      opacity: 0.9;
+    }
+  }
+
+  &__circles {
+    display: none;
   }
 }
