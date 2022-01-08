@@ -463,9 +463,12 @@
     height: 25rem;
     @include mq($media-min) {
       display: grid;
-      grid-template-columns: repeat(4, 21%);
+      grid-template-columns: 1fr 1.5fr 1fr;
       gap: 1.5em;
-      border: 2px solid red;
+      height: auto;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
     }
   }
 
@@ -482,6 +485,18 @@
     @include mq($media-tab-land) {
       opacity: 0.5;
       z-index: 2;
+      position: unset;
+      left: 0;
+      top: 0;
+      transform: translate(0);
+      padding: 4em 2em;
+      filter: blur(3px);
+    }
+
+    &.before-active {
+    }
+
+    &.after-active {
     }
 
     &.active {
@@ -497,6 +512,8 @@
 
       @include mq($media-tab-land) {
         width: auto;
+        filter: blur(0);
+        padding: 4em 2.5em;
       }
     }
   }
@@ -551,6 +568,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 3;
+    @include mq($media-tab-land) {
+      width: 60%;
+      top: 70%;
+      flex-wrap: wrap;
+      height: 18rem;
+      // background-color: red;
+    }
   }
 
   &__btns button {
@@ -564,13 +589,35 @@
     place-items: center;
     background-color: $color-bg;
     cursor: pointer;
+    @include mq($media-tab-land) {
+      font-size: 2rem;
+    }
     &:hover {
       box-shadow: $box-shadow;
-      opacity: 0.9;
+      opacity: 0.8;
+      background-color: $color-white;
     }
   }
 
   &__circles {
     display: none;
+    @include mq($media-tab-land) {
+      display: flex;
+      justify-content: center;
+      flex: 100%;
+      align-self: flex-end;
+      // background-color: red;
+    }
+
+    button {
+      margin: 0 0.15em;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    button.active {
+      background-color: $color-white;
+      box-shadow: $box-shadow;
+    }
   }
 }
