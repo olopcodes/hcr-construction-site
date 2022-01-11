@@ -305,10 +305,16 @@
 
   &__showcase {
     order: 2;
+    height: 50rem;
+    position: relative;
     @include mq($media-tab) {
       order: 1;
       flex: 1;
     }
+  }
+
+  &__work {
+    position: absolute;
   }
 
   &__tabs {

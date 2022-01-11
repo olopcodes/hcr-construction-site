@@ -62,3 +62,4 @@ var bestObserver = new IntersectionObserver(function (entries, observer) {
   });
 }, bestOptions);
 bestObserver.observe(homeBestSection);
+"use strict";
