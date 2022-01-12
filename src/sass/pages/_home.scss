@@ -473,7 +473,7 @@
 
   &__wrapper {
     position: relative;
-    height: 25rem;
+    height: 33rem;
     @include mq($media-min) {
       display: grid;
       grid-template-columns: 1fr 1.5fr 1fr;
@@ -491,10 +491,10 @@
     border-radius: 3px;
     padding: 4em 0.5em;
     transition: 250ms ease;
-    // height: 23rem;
     opacity: 0;
     background-color: $color-bg-light;
-
+    grid-row: 1;
+    width: 100%;
     @include mq($media-tab-land) {
       opacity: 0.5;
       z-index: 2;
@@ -506,18 +506,19 @@
       filter: blur(3px);
     }
 
-    &.before-active {
+    &.after-active {
+      grid-column: 3 / span 1;
     }
 
-    &.after-active {
+    &.before-active {
+      grid-column: 1 / span 1;
     }
 
     &.active {
       opacity: 1;
       z-index: 2;
-      // background-color: $color-bg;
       box-shadow: $box-shadow;
-
+      grid-column: 2 / span 1;
       @include mq($media-min) {
         width: 22rem;
         padding: 4em 1.5em;
