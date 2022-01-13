@@ -1,3 +1,4 @@
+// for the tabs in the works section
 const tabsWrapper = document.querySelector(".home-works__tabs");
 const works = document.querySelectorAll(".home-works__work");
 const tabs = tabsWrapper.querySelectorAll("button");
