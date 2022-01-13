@@ -1,0 +1,36 @@
+.form-outline {
+  padding: 6em 0;
+  background-color: $color-black;
+  color: $color-white;
+
+  .container {
+    @include mq($media-tab-land) {
+      display: flex;
+      gap: 3em;
+    }
+  }
+
+  &__form {
+    margin-top: 2em;
+    @include mq($media-tab-land) {
+      margin-top: 0;
+    }
+  }
+
+  &__form input,
+  &__form textarea {
+    background-color: $color-black;
+    border: 0;
+    color: $color-accent;
+    border-bottom: 1px solid $color-white;
+    padding: 0.5em;
+    margin: 1em 0;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+}

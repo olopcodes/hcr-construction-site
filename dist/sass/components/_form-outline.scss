@@ -1,0 +1,29 @@
+.form-outline {
+  padding: 6em 0;
+  background-color: $color-black;
+  color: $color-white;
+
+  &__form {
+    margin-top: 2em;
+  }
+
+  &__form input,
+  &__form textarea {
+    background-color: $color-black;
+    border: 0;
+    color: $color-accent;
+    border-bottom: 1px solid $color-white;
+    padding: 0.5em;
+    margin: 1em 0;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $color-white;
+    }
+
+    @include mq($media-desktop) {
+    }
+  }
+}

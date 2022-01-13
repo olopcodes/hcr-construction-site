@@ -33,15 +33,20 @@
     text-transform: capitalize;
   }
 
-  &-tertiary {
-  }
-
-  &-fourth {
-  }
-
   &-form {
     font-size: 1.3rem;
     color: $color-bg;
     text-align: center;
+  }
+
+  &-form-outline {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    // border-bottom: 1px solid $color-grey;
+    margin-bottom: 0.3em;
+    span {
+      color: $color-bg-light;
+      // text-shadow: 0 3px 6px rgba($color-accent, 0.5);
+    }
   }
 }

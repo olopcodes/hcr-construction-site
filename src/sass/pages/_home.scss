@@ -478,7 +478,6 @@
       display: grid;
       grid-template-columns: 1fr 1.5fr 1fr;
       gap: 1.5em;
-      height: auto;
       align-items: center;
       width: 90%;
       margin: 0 auto;
@@ -490,7 +489,7 @@
     text-align: center;
     border-radius: 3px;
     padding: 4em 0.5em;
-    transition: 250ms ease;
+    transition: 100ms linear;
     opacity: 0;
     background-color: $color-bg-light;
     grid-row: 1;
@@ -540,7 +539,7 @@
     left: 40%;
     top: 1rem;
     z-index: 0;
-    opacity: 0.7;
+    opacity: 0.2;
   }
 
   &__text {

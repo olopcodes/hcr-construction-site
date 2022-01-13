@@ -27,4 +27,17 @@
 
     // background-color: ;
   }
+
+  &--outline {
+    @extend .btn;
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+
+    &:hover {
+      background-color: $color-accent;
+      color: $color-black;
+      border-color: $color-accent;
+    }
+  }
 }
