@@ -31,8 +31,8 @@
   &--outline {
     @extend .btn;
     background-color: transparent;
-    color: $color-white;
-    border: 1px solid $color-white;
+    color: $color-accent;
+    border: 1px solid $color-accent;
 
     &:hover {
       background-color: $color-accent;

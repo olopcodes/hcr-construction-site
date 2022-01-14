@@ -44,6 +44,9 @@
     text-transform: capitalize;
     // border-bottom: 1px solid $color-grey;
     margin-bottom: 0.3em;
+    @include mq($media-tab-land) {
+      font-size: 2.5rem;
+    }
     span {
       color: $color-bg-light;
       // text-shadow: 0 3px 6px rgba($color-accent, 0.5);

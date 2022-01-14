@@ -52,4 +52,10 @@
       // text-shadow: 0 3px 6px rgba($color-accent, 0.5);
     }
   }
+
+  &-logo-small {
+    // text-align: ce;
+    text-transform: capitalize;
+    font-size: $small-font-size;
+  }
 }
