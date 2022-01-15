@@ -4,13 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Heights Construction and Renovations</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="sass/main.css" />
+    <title>
+      Heights Construction and Renovations | Taking Homes to New Heights
+    </title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <i class="ri-home-smile-fill logo-icon"></i>
+          <div class="logo__name">
+            <p class="logo__name-top">heights</p>
+            <p class="logo__name-bottom">c and r</p>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a class="main-nav__link" href="./projects.html">projects</a>
+
+          <div class="main-nav__contact-links">
+            <a class="contact__link" href="tel:+1-212-555-1234">
+              <i class="ri-phone-line"></i> 1-212-123-4567
+            </a>
+            <a class="contact__link" href="mailto:help@heightscandr.com">
+              <i class="ri-mail-send-fill"></i> help@heightscandr.com
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="projects-hero">
+        <!-- <video width="100%" loop autoplay muted>
+          <source src="./video/video-1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+        <div class="container">
+          <h1 class="heading-main">fulfilling dreams one house at a time</h1>
+          <p>
+            Several of our constructions have garnered critical acclaim.
+            Remodeling a home has never been easier nor more time efficient
+          </p>
+          <a href="#" class="btn btn--cta"
+            >see our work <i class="ri-arrow-down-line"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- form outline -->
+      <section class="form-outline">
+        <div class="container">
+          <div class="form-outline__heading">
+            <h2 class="heading-form-outline">
+              lets us take your home to new <span>heights</span>
+            </h2>
+            <p>Fill out the form to get contacted by a representative</p>
+          </div>
+
+          <form class="form-outline__form">
+            <input type="text" name="outline-fname" placeholder="first name" />
+            <input type="text" name="outline-lname" placeholder="last name" />
+            <input
+              type="email"
+              name="outline-email"
+              placeholder="youremail@mail.com"
+            />
+            <input type="tel" name="outline-tel" placeholder="1-234-4567" />
+            <textarea
+              name="outline-textarea"
+              cols="30"
+              rows="5"
+              placeholder="description of what you need done"
+            ></textarea>
+            <button class="btn btn--outline">submit</button>
+          </form>
+        </div>
+      </section>
+      <!-- form outline -->
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <h2 class="heading-logo-small">
+          heights construction and renovations &copy; 2022
+        </h2>
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+          <a href="#"><i class="ri-youtube-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/observer.js"></script>
+  </body>
 </html>

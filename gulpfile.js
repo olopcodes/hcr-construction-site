@@ -52,7 +52,7 @@ function js(cb) {
         presets: ["@babel/env"],
       })
     )
-    .pipe(concat("bundle.js"))
+    // .pipe(concat("bundle.js"))
     .pipe(dest(`${destination}/js`));
   cb();
 }

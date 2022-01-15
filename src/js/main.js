@@ -16,5 +16,3 @@ regularForm.addEventListener("focusout", (e) => {
     e.target.previousElementSibling.classList.remove("focus");
   }
 });
-
-// animate header on scroll
