@@ -109,11 +109,75 @@
                   sizes=" 
                       (min-width: 60em) 50vw,
                       (max-width: 48em) 100vw,"
-                  data-sources='{"srcSmall": "./images/reno-4-small.jpeg", "srcBig": "./images/reno-4-med.jpeg"}'
-                  data-img="img-main"
+                  data-sources='{
+                    "sourceOne": "./images/reno-4-small.jpeg", 
+                    "sourceTwo": "./images/reno-4-med.jpeg",
+                    
+                  }'
+                  data-img="img-one"
                 />
               </div>
-              <div class="projects-section__images-row"></div>
+              <div class="projects-section__images-row">
+                <img
+                  src="./images/construction-1-med.jpeg"
+                  alt="a renovated recreation
+            center"
+                  loading="lazy"
+                  decoding="async"
+                  srcset="
+                    ./images/construction-1-med.jpeg  800w,
+                    ./images/construction-1-big.jpeg 1200w
+                  "
+                  sizes=" 
+                      (min-width: 60em) 50vw,
+                      (max-width: 48em) 100vw,"
+                  data-sources='{
+                    "sourceOne": "./images/construction-1-med.jpeg", 
+                    "sourceTwo": "./images/construction-1-big.jpeg",
+                  }'
+                  data-img="img-two"
+                />
+
+                <img
+                  src="./images/rec-center-small.jpeg"
+                  alt="a renovated recreation
+            center"
+                  loading="lazy"
+                  decoding="async"
+                  srcset="
+                    ./images/rec-center-small.jpeg 400w,
+                    ./images/rec-center-med.jpeg   800w
+                  "
+                  sizes=" 
+                      (min-width: 60em) 50vw,
+                      (max-width: 48em) 100vw,"
+                  data-sources='{
+                    "sourceOne": "./images/construction-1-med.jpeg", 
+                    "sourceTwo": "./images/construction-1-big.jpeg",
+                  }'
+                  data-img="img-three"
+                />
+
+                <img
+                  src="./images/rec-center-1-small.jpeg"
+                  alt="a renovated recreation
+            center"
+                  loading="lazy"
+                  decoding="async"
+                  srcset="
+                    ./images/rec-center-1-small.jpeg 400w,
+                    ./images/rec-center-1-med.jpeg   800w
+                  "
+                  sizes=" 
+                      (min-width: 60em) 50vw,
+                      (max-width: 48em) 100vw,"
+                  data-sources='{
+                    "sourceOne": "./images/construction-1-med.jpeg", 
+                    "sourceTwo": "./images/construction-1-big.jpeg",
+                  }'
+                  data-img="img-three"
+                />
+              </div>
             </div>
 
             <div class="projects-section__heading">
@@ -133,7 +197,7 @@
               <span>solar panel roof</span>
               <span>new activity room</span>
             </div>
-            <a href="#form-outline" class="btn">contact us</a>
+            <a href="#form-outline" class="btn">start renovating now</a>
           </div>
         </div>
       </section>
