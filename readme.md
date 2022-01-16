@@ -17,4 +17,6 @@ A project for a local construction business to add to my portfolio. I got inspir
 
 - Lazy load images
 - Tab Component
+- Slider Component
 - Modal Component
+- Use of the observer api
