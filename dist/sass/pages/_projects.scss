@@ -1,3 +1,4 @@
+// hero ===================================================
 .projects-hero {
   height: 32rem;
   position: relative;
@@ -35,9 +36,63 @@
       color: $color-white;
       margin-bottom: 2em;
     }
-
+    .btn:hover {
+      background-color: $color-bg;
+      border-color: $color-bg;
+      color: $color-white;
+    }
     .btn i {
       vertical-align: middle;
+    }
+  }
+}
+
+// about ======================================================
+.projects-about {
+  padding: 6em 0;
+  background-color: $color-bg-light;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    @include mq($media-tab-land) {
+      flex-direction: row;
+    }
+  }
+
+  &__images {
+    order: 2;
+
+    @include mq($media-tab-land) {
+      order: 1;
+      flex: 1;
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+      margin-bottom: 1em;
+
+      @include mq($media-tab-land) {
+        width: 25rem;
+      }
+    }
+  }
+
+  &__text {
+    order: 1;
+    @include mq($media-tab-land) {
+      flex: 1;
+    }
+    h2 {
+      text-align: left;
+    }
+
+    p {
+      border-left: 2px solid $color-accent;
+      padding-left: 0.5em;
+      margin-bottom: 1em;
     }
   }
 }

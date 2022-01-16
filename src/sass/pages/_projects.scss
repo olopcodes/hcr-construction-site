@@ -51,12 +51,16 @@
 .projects-about {
   padding: 6em 0;
   background-color: $color-bg-light;
+  background-color: rgba($color-bg-light, 0.5);
   .container {
     display: flex;
     flex-direction: column;
     gap: 2em;
     @include mq($media-tab-land) {
       flex-direction: row;
+      height: 35rem;
+      align-items: center;
+      gap: 4em;
     }
   }
 
@@ -66,6 +70,7 @@
     @include mq($media-tab-land) {
       order: 1;
       flex: 1;
+      align-self: stretch;
       display: flex;
     }
 
@@ -75,7 +80,24 @@
       margin-bottom: 1em;
 
       @include mq($media-tab-land) {
-        width: 25rem;
+        width: 22rem;
+        margin-bottom: 0;
+
+        &:nth-of-type(1) {
+          align-self: flex-start;
+        }
+
+        &:nth-of-type(2) {
+          align-self: flex-end;
+          transform: translateX(-15rem);
+          @include mq($media-desktop) {
+            transform: translateX(-17rem);
+          }
+        }
+
+        @include mq($media-desktop) {
+          width: 25rem;
+        }
       }
     }
   }
@@ -93,6 +115,11 @@
       border-left: 2px solid $color-accent;
       padding-left: 0.5em;
       margin-bottom: 1em;
+
+      @include mq($media-desktop) {
+        padding-left: 1.5em;
+        margin-bottom: 1.5em;
+      }
     }
   }
 }
