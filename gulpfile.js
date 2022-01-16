@@ -53,7 +53,7 @@ function js(cb) {
       })
     )
     // .pipe(concat("bundle.js"))
-    .pipe(dest(`${destination}/js`));
+    .pipe(dest(`${destination}/`));
   cb();
 }
 

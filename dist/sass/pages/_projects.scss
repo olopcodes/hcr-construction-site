@@ -14,8 +14,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.3;
-    filter: blur(5px);
+    opacity: 0.25;
   }
 
   &__heading {
@@ -51,12 +50,16 @@
 .projects-about {
   padding: 6em 0;
   background-color: $color-bg-light;
+  background-color: rgba($color-black, 0.8);
   .container {
     display: flex;
     flex-direction: column;
     gap: 2em;
     @include mq($media-tab-land) {
       flex-direction: row;
+      height: 35rem;
+      align-items: center;
+      gap: 4em;
     }
   }
 
@@ -66,6 +69,7 @@
     @include mq($media-tab-land) {
       order: 1;
       flex: 1;
+      align-self: stretch;
       display: flex;
     }
 
@@ -75,7 +79,24 @@
       margin-bottom: 1em;
 
       @include mq($media-tab-land) {
-        width: 25rem;
+        width: 22rem;
+        margin-bottom: 0;
+
+        &:nth-of-type(1) {
+          align-self: flex-start;
+        }
+
+        &:nth-of-type(2) {
+          align-self: flex-end;
+          transform: translateX(-15rem);
+          @include mq($media-desktop) {
+            transform: translateX(-17rem);
+          }
+        }
+
+        @include mq($media-desktop) {
+          width: 25rem;
+        }
       }
     }
   }
@@ -87,12 +108,19 @@
     }
     h2 {
       text-align: left;
+      color: $color-bg-light;
     }
 
     p {
       border-left: 2px solid $color-accent;
       padding-left: 0.5em;
       margin-bottom: 1em;
+      color: $color-white;
+
+      @include mq($media-desktop) {
+        padding-left: 1.5em;
+        margin-bottom: 1.5em;
+      }
     }
   }
 }

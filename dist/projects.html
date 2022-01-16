@@ -51,8 +51,8 @@
             Several of our constructions have garnered critical acclaim.
             Remodeling a home has never been easier nor more time efficient
           </p>
-          <a href="#" class="btn btn--outline"
-            >see our work <i class="ri-arrow-down-line"></i
+          <a href="#projects-section" class="btn btn--outline"
+            >our projects <i class="ri-arrow-down-line"></i
           ></a>
         </div>
       </section>
@@ -86,8 +86,59 @@
           </div>
         </div>
       </section>
+      <section id="projects-section" class="projects-section">
+        <div class="container">
+          <div
+            id="projects-section-community"
+            name="projects-section-community"
+            class="projects-section__project"
+          >
+            <div class="projects-section__images">
+              <div class="projects-section__image-focus">
+                <img
+                  id="community"
+                  src="./images/reno-4-small.jpeg"
+                  alt="a renovated recreation
+            center"
+                  loading="lazy"
+                  decoding="async"
+                  srcset="
+                    ./images/reno-4-small.jpeg 400w,
+                    ./images/reno-4-med.jpeg   800w
+                  "
+                  sizes=" 
+                      (min-width: 60em) 50vw,
+                      (max-width: 48em) 100vw,"
+                  data-sources='{"srcSmall": "./images/reno-4-small.jpeg", "srcBig": "./images/reno-4-med.jpeg"}'
+                  data-img="img-main"
+                />
+              </div>
+              <div class="projects-section__images-row"></div>
+            </div>
+
+            <div class="projects-section__heading">
+              <span class="home-works__icon"
+                ><i class="ri-community-fill"></i
+              ></span>
+              <h3 class="heading-work">The community recreation center</h3>
+            </div>
+            <p class="home-works__description">
+              The community rec center has been a staple of the neighborhood for
+              over 25 years. The committee gave us the task of revitalizing the
+              center, and make it a more welcoming environment for people to
+              come and enjoy its plentiful resources.
+            </p>
+            <div class="home-works__facts">
+              <span>6 month completion</span>
+              <span>solar panel roof</span>
+              <span>new activity room</span>
+            </div>
+            <a href="#form-outline" class="btn">contact us</a>
+          </div>
+        </div>
+      </section>
       <!-- form outline -->
-      <section class="form-outline">
+      <section id="form-outline" class="form-outline">
         <div class="container">
           <div class="form-outline__heading">
             <h2 class="heading-form-outline">
@@ -132,5 +183,6 @@
       </div>
     </footer>
     <script src="js/observer.js"></script>
+    <script src="js/projects-page.js"></script>
   </body>
 </html>
