@@ -124,3 +124,32 @@
     }
   }
 }
+
+// projects ===============================================
+.projects-section {
+  &__project {
+  }
+
+  &__images {
+  }
+
+  &__image-focus {
+    img {
+    }
+  }
+
+  &__image-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    img {
+    }
+  }
+
+  &__description {
+  }
+
+  &__heading {
+    display: flex;
+  }
+}
