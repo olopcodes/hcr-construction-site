@@ -159,10 +159,6 @@
   }
 
   &__images {
-    &:nth-of-type(odd) {
-      order: 2;
-    }
-
     @include mq($media-desktop) {
       width: 45%;
     }
@@ -170,10 +166,6 @@
       border-radius: 3px;
       cursor: pointer;
     }
-  }
-
-  &__images:nth-of-type(odd) {
-    background-color: red;
   }
 
   &__image-focus {
