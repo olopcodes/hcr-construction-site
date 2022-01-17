@@ -135,6 +135,18 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3em;
+      @include mq($media-tab) {
+        margin-bottom: 5em;
+      }
+
+      @include mq($media-desktop) {
+        margin-bottom: 7em;
+      }
+    }
+
     @include mq($media-tab-land) {
       flex-direction: row;
       justify-content: space-between;
@@ -147,7 +159,6 @@
   }
 
   &__images {
-    order: 2;
     @include mq($media-desktop) {
       width: 45%;
     }
@@ -184,7 +195,9 @@
   }
 
   &__description {
-    order: 1;
+    &:nth-of-type(odd) {
+      order: 1;
+    }
     background-color: $color-white;
     // margin-bottom: 2em;
     @include mq($media-desktop) {

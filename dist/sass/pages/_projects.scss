@@ -127,29 +127,108 @@
 
 // projects ===============================================
 .projects-section {
+  padding: 6em 0;
+  .container {
+  }
+
   &__project {
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 
-  &__images {
-  }
+    &:not(:last-of-type) {
+      margin-bottom: 3em;
+      @include mq($media-tab) {
+        margin-bottom: 5em;
+      }
 
-  &__image-focus {
-    img {
+      @include mq($media-desktop) {
+        margin-bottom: 7em;
+      }
+    }
+
+    @include mq($media-tab-land) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3em;
+    }
+
+    @include mq($media-desktop) {
     }
   }
 
-  &__image-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  &__images {
+    &:nth-of-type(odd) {
+      order: 2;
+    }
+
+    @include mq($media-desktop) {
+      width: 45%;
+    }
+    img {
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+
+  &__images:nth-of-type(odd) {
+    background-color: red;
+  }
+
+  &__image-focus {
+    @include mq($media-tab-land) {
+      height: 25rem;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__images-row {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
 
     img {
+      width: 47%;
+
+      @include mq($media-tab-land) {
+        width: 30%;
+      }
     }
   }
 
   &__description {
+    &:nth-of-type(odd) {
+      order: 1;
+    }
+    background-color: $color-white;
+    // margin-bottom: 2em;
+    @include mq($media-desktop) {
+      width: 45%;
+    }
   }
 
   &__heading {
     display: flex;
+    margin-bottom: 1.5em;
+
+    span {
+      background-color: $color-accent;
+      box-shadow: none;
+    }
+  }
+
+  &__facts {
+    margin: 1em 0 2em;
+  }
+
+  .btn {
+    background-color: $color-bg;
+    color: $color-white;
   }
 }
