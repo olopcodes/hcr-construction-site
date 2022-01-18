@@ -187,6 +187,10 @@
       height: 22rem;
     }
 
+    @include mq($media-tab) {
+      height: 30rem;
+    }
+
     @include mq($media-tab-land) {
       height: 25rem;
     }
