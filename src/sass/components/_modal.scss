@@ -1,0 +1,66 @@
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  opacity: 0;
+  place-items: center;
+  transition: 175ms linear;
+  transform: scale(0);
+
+  &.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: $color-white;
+    border: 1px solid;
+    height: 2rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    @include mq($media-desktop) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-accent;
+      color: black;
+      border-color: $color-accent;
+    }
+  }
+
+  &-image {
+    width: 90%;
+    border-radius: 5px;
+    @include mq($media-min) {
+      width: 25rem;
+    }
+
+    @include mq($media-tab) {
+      width: 35rem;
+    }
+
+    @include mq($media-tab-land) {
+      height: 35rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
+  height: 100%;
+  width: 100%;
+  //   display: ;
+
+  &-btn {
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: $color-white;
+    border-color: $color-accent;
+    display: grid;
+    place-items: center;
+    position: absolute;
+  }
+
+  &-image {
+  }
+}
