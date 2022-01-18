@@ -1,3 +1,4 @@
+
 "use strict";
 
 var imgs = document.querySelectorAll(".projects-section__images img");
@@ -23,3 +24,4 @@ modalBtn.addEventListener("click", function (e) {
   e.preventDefault();
   modal.classList.remove("show");
 });
+
